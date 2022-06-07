@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'listview_app.dart';
+import 'listview_separated_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: ListViewApp(),
+        child: ListViewSeparatedApp(),
+        // child: ListViewApp(),
       ),
     );
   }

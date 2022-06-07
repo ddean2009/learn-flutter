@@ -2,20 +2,17 @@
 import 'package:flutter/material.dart';
 
 class ListViewApp extends StatelessWidget{
-
+  const ListViewApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GridView.extent(
-        maxCrossAxisExtent: 100,
-        padding: const EdgeInsets.all(4),
-        mainAxisSpacing: 4,
-        crossAxisSpacing: 4,
-        children: buildChild(10));
-  }
-
-  List<Widget> buildChild(int number) {
-    return List.generate(
-        number, (i) => Container(
-        child: Image.asset('images/head.jpg')));
+    return ListView.builder(
+      itemCount: 5,
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
+            constraints: const BoxConstraints(maxWidth:100,maxHeight: 100),
+            child: Image.asset('images/head.jpg')
+        );
+      },
+    );
   }
 }
