@@ -20,7 +20,7 @@ void main() {
           page = const SettingsPage();
         } else if (settings.name == routeFriendMatch) {
           page = const FriendMatchFlow(
-            setupPageRoute: routeFriendMatch,
+            setupPageRoute: routeFriendMatchPage,
           );
         }
 
